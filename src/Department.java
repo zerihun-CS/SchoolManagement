@@ -8,8 +8,17 @@ public class Department  extends AcademicEntity{
         super(name);
     }
 
+
+    @Override
+    public String toString() {
+        return "Department{" + getName()+
+                "courseList=" + courseList +
+                '}';
+    }
+
     @Override
     void displayInfo() {
         System.out.println("Department Name:"+getName());
     }
 }
+

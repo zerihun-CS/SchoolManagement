@@ -1,4 +1,4 @@
-public class Grade {
+public class Grade  implements Calculations  {
     private Student student;
    private float result;
    private char assignedGrade;
@@ -38,14 +38,14 @@ public class Grade {
     }
 
 
-    private char computeGrade(float result) {
-        if (result > 80 && result < 100) return 'A';
-        else if (result > 70 && result < 80) return 'B';
-        else if (result > 60 && result < 70) return 'C';
-        else if (result > 50 && result < 60) return 'D';
-        else if (result < 50) return 'F';
-        return 'I';
-    }
+//    private char computeGrade(float result) {
+//        if (result > 80 && result < 100) return 'A';
+//        else if (result > 70 && result < 80) return 'B';
+//        else if (result > 60 && result < 70) return 'C';
+//        else if (result > 50 && result < 60) return 'D';
+//        else if (result < 50) return 'F';
+//        return 'I';
+//    }
 
 
     @Override
@@ -54,5 +54,20 @@ public class Grade {
                 "result=" + result +
                 ", assignedGrade=" + assignedGrade +
                 '}';
+    }
+
+    @Override
+    public float GPACalculations(Student student) {
+        return 0;
+    }
+
+    @Override
+    public char computeGrade(float result) {
+        if (result > 80 && result < 100) return 'A';
+        else if (result > 70 && result < 80) return 'B';
+        else if (result > 60 && result < 70) return 'C';
+        else if (result > 50 && result < 60) return 'D';
+        else if (result < 50) return 'F';
+        return 'I';
     }
 }

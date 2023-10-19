@@ -8,6 +8,7 @@ public class Course {
   private ArrayList<Grade>  courseResult = new ArrayList<>();
   Professor professor;
 
+
     public Course(int courseCode, String courseName, Professor professor) {
         this.courseCode = courseCode;
         this.courseName = courseName;
